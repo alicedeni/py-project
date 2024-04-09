@@ -1,5 +1,8 @@
 import sys
 from PyQt5 import QtWidgets, uic
+from PyQt5.QtCore import QSize
+from PyQt5.QtGui import QIcon
+
 
 class Registration(QtWidgets.QMainWindow):
     def __init__(self):
@@ -22,6 +25,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui = uic.loadUi('main_window.ui', self)
         self.ui.settings_btn.clicked.connect(self.show_settings_window)
         self.ui.search_btn.clicked.connect(self.show_search_window)
+
+        icon = QIcon()
+        icon.addFile("icons/mic.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.ui.record.setIcon(icon)
 
     def show_settings_window(self):
         self.settings_window = SettingsWindow()
@@ -56,6 +63,10 @@ class SearchWindow(QtWidgets.QMainWindow):
         self.ui = uic.loadUi('search_window.ui', self)
         self.ui.return_btn.clicked.connect(self.show_main_window)
         self.ui.settings_btn.clicked.connect(self.show_settings_window)
+
+        icon = QIcon()
+        icon.addFile("icons/search.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.ui.search_btn.setIcon(icon)
 
     def show_settings_window(self):
         self.settings_window = SettingsWindow()
