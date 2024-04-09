@@ -2,6 +2,5 @@
   <qresource prefix="icons">
     <file>icons/mic.svg</file>
     <file>icons/search.svg</file>
-    <file>icons/line1.svg</file>
   </qresource>
 </RCC>
