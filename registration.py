@@ -22,6 +22,7 @@ class Registration(QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
+    app.setWindowIcon(QIcon('icons/window.png'))
     window = Registration()
     window.show()
     sys.exit(app.exec_())
