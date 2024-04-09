@@ -22,5 +22,5 @@ pip install -r requirements.txt
 ```
 3. Запустите приложение:
 ```python
-python main.py
+python registration.py
 ```
