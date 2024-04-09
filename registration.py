@@ -1,5 +1,6 @@
 import sys
 from PyQt5 import QtWidgets, uic
+from PyQt5.QtGui import QIcon
 
 
 class Registration(QtWidgets.QMainWindow):
@@ -8,6 +9,7 @@ class Registration(QtWidgets.QMainWindow):
         self.ui = uic.loadUi('registration.ui', self)
         self.ui.enter_btn.clicked.connect(self.check_login)
         self.ui.reg_btn.clicked.connect(self.check_login)
+        self.setWindowIcon(QIcon('icons/window.png'))
 
     def check_login(self):
         if self.ui.login.text() and self.ui.password.text():

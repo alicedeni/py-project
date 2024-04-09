@@ -8,6 +8,7 @@ class SearchWindow(QtWidgets.QMainWindow):
         self.ui = uic.loadUi('search_window.ui', self)
         self.ui.return_btn.clicked.connect(self.show_main_window)
         self.ui.settings_btn.clicked.connect(self.show_settings_window)
+        self.setWindowIcon(QIcon('icons/window.png'))
 
         icon = QIcon()
         icon.addFile("icons/search.svg", QSize(), QIcon.Normal, QIcon.Off)

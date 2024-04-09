@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets, uic
+from PyQt5.QtGui import QIcon
 
 class SettingsWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -6,6 +7,7 @@ class SettingsWindow(QtWidgets.QMainWindow):
         self.ui = uic.loadUi('settings.ui', self)
         self.ui.exit_btn.clicked.connect(self.register)
         self.ui.return_btn.clicked.connect(self.show_main_window)
+        self.setWindowIcon(QIcon('icons/window.png'))
     
     def register(self):
         from registration import Registration

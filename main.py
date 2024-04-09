@@ -14,6 +14,7 @@ class MainWindow(QtWidgets.QMainWindow):
         icon = QIcon()
         icon.addFile("icons/mic.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.ui.record.setIcon(icon)
+        self.setWindowIcon(QIcon('icons/window.png'))
 
     def show_settings_window(self):
         self.settings_window = SettingsWindow()
