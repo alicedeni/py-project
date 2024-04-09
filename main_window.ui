@@ -221,7 +221,7 @@ background-color: rgba(255, 255, 255, 50);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Привет, user_name!</string>
+     <string>Привет, user!</string>
     </property>
    </widget>
    <widget class="QScrollArea" name="song">

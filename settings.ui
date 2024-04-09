@@ -122,7 +122,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Привет, user_name!</string>
+     <string>Привет, user!</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame_6">
@@ -171,48 +171,6 @@ background-color: rgba(255, 255, 255, 50);</string>
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QComboBox" name="theme">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>290</y>
-      <width>141</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">height: 25px;
-border-radius: 5px;
-color: #FFF;
-background-color: rgba(255, 255, 255, 50);</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Темная</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Светлая</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>290</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Тема приложения:</string>
-    </property>
    </widget>
    <widget class="QPushButton" name="clear_btn">
     <property name="geometry">
