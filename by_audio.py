@@ -41,6 +41,10 @@ def find_song_info(wav_file):
     Returns:
         tuple: Кортеж, содержащий название песни, текст песни, аккорды и исполнителя.
     """
+    song_title = "Не удалось распознать текст песни."
+    song_artist = "Не удалось распознать текст песни."
+    song_lyrics = "Не удалось распознать текст песни."
+    song_chords = "Не удалось получить аккорды к песне."
     # Распознавание речи в аудиофайле
     r = sr.Recognizer()
     with sr.AudioFile(wav_file) as source:
@@ -129,7 +133,18 @@ def get_song_chords(song_title, artist):
     """
     url = f"https://chorder.ru/search?q={artist}+{song_title}"
     print(url)
-    response = requests.get(url)
+    # Определение User-Agent
+    user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    
+    # Определение параметров запроса
+    params = {
+        'allow_redirects': True,
+        'headers': {
+            'User-Agent': user_agent
+        }
+    }
+    
+    response = requests.get(url, **params)
     soup = BeautifulSoup(response.text, "html.parser")
     
     # Найти первый результат поиска
@@ -147,7 +162,7 @@ def get_song_chords(song_title, artist):
     song_response = requests.get(song_url)
     song_soup = BeautifulSoup(song_response.text, "html.parser")
     song_text = remove_html_tags(str(song_soup.find("pre")))
-    if song_text:
+    if song_text and song_text != "None":
         return song_text
     else:
         return "Не удалось найти аккорды для указанной песни."

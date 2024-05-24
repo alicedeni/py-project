@@ -1,8 +1,12 @@
+import os
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
-
+from dotenv import load_dotenv
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 # Создаем соединение с базой данных
-engine = create_engine('mysql+pymysql://root:1q2w3e4r@localhost/py_project')
+engine = create_engine(f'mysql+pymysql://root:{os.getenv("PASSWORD")}@localhost/{os.getenv("NAME")}')
 
 # Создаем сессию для взаимодействия с базой данных
 Session = sessionmaker(bind=engine)
@@ -33,6 +37,7 @@ class SavedSong(Base):
     user = relationship("User", back_populates="saved_songs")
 
 User.saved_songs = relationship("SavedSong", order_by=SavedSong.id, back_populates="user")
+
 
 '''
 # Получаем всех пользователей из таблицы users

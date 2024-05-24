@@ -85,7 +85,18 @@ def get_song_chords(song_title, artist):
         str: Аккорды песни.
     """
     url = f"https://chorder.ru/search?q={artist}+{song_title}"
-    response = requests.get(url)
+    # Определение User-Agent
+    user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+
+    # Определение параметров запроса
+    params = {
+        'allow_redirects': True,
+        'headers': {
+            'User-Agent': user_agent
+        }
+    }
+
+    response = requests.get(url, **params)
     soup = BeautifulSoup(response.text, "html.parser")
     # Найти первый результат поиска
     song_links = soup.find_all("a")

@@ -3,7 +3,7 @@ from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
 from settings import SettingsWindow
 from search import SearchWindow
-from by_audio import search_song_from_file  # Импорт функции из search_song.py
+from by_audio import search_song_from_file  # Импорт функции из by_audio.py
 import pyaudio
 import wave
 import speech_recognition as sr
