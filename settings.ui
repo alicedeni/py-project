@@ -194,7 +194,7 @@ background-color: rgba(255, 255, 255, 50);</string>
      <string>Очистить сохраненные</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="reset_btn">
+   <widget class="QPushButton" name="to_save_btn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -213,7 +213,7 @@ color: #FFF;
 background-color: rgba(255, 255, 255, 50);</string>
     </property>
     <property name="text">
-     <string>Сбор настроек</string>
+     <string>Сохранить изменения</string>
     </property>
    </widget>
    <widget class="QFrame" name="input">

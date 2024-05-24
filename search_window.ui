@@ -126,34 +126,43 @@ background-color: rgba(255, 255, 255, 0);</string>
     </property>
    </widget>
    <widget class="QScrollArea" name="song">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>150</y>
-      <width>541</width>
-      <height>301</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">height: 25px;
-border-radius: 5px;
-color: #FFF;
-background-color: rgba(255, 255, 255, 20);</string>
-    </property>
-    <property name="widgetResizable">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>541</width>
-       <height>301</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
+        <property name="geometry">
+                <rect>
+                <x>240</x>
+                <y>150</y>
+                <width>541</width>
+                <height>301</height>
+                </rect>
+        </property>
+        <property name="styleSheet">
+                <string notr="true">height: 25px;
+        border-radius: 5px;
+        color: #FFF;
+        background-color: rgba(255, 255, 255, 20);</string>
+        </property>
+        <property name="widgetResizable">
+                <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+                <property name="geometry">
+                <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>541</width>
+                        <height>301</height>
+                </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                        <widget class="QLabel" name="song_label">
+                        <property name="text">
+                                <string>Название песни - Исполнитель</string>
+                        </property>
+                        </widget>
+                </item>
+                </layout>
+        </widget>
+        </widget>
    <widget class="QFrame" name="frame_6">
     <property name="geometry">
      <rect>
